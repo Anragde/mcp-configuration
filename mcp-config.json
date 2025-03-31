@@ -1,0 +1,64 @@
+{
+  "mcpServers": {
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "VOTRE_CLE_API_BRAVE"
+      },
+      "url": "ws://localhost:3001",
+      "enabled": true,
+      "name": "Brave Search",
+      "capabilities": {
+        "contexts": ["web-search", "internet-search"],
+        "languages": ["en", "fr"]
+      },
+      "authentication": {
+        "type": "api-key"
+      },
+      "priority": 5
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "VOTRE_TOKEN_GITHUB"
+      },
+      "url": "ws://localhost:3002",
+      "enabled": true,
+      "name": "GitHub",
+      "capabilities": {
+        "contexts": ["code-search", "repository-info"],
+        "languages": ["*"]
+      },
+      "authentication": {
+        "type": "token"
+      },
+      "priority": 7
+    },
+    "france-care-medical": {
+      "url": "ws://localhost:3000",
+      "name": "France Care Medical Service",
+      "description": "Service d'assistance pour trouver des médecins en France",
+      "enabled": true,
+      "capabilities": {
+        "contexts": ["medical", "healthcare", "doctor-search"],
+        "languages": ["fr"]
+      },
+      "authentication": {
+        "type": "none"
+      },
+      "priority": 10
+    }
+  },
+  "settings": {
+    "enableMCP": true,
+    "logRequests": true
+  }
+}
