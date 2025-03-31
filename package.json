@@ -1,0 +1,15 @@
+{
+  "name": "@anragde/mcp-configuration",
+  "version": "1.0.0",
+  "description": "Configuration MCP pour les serveurs de contexte",
+  "main": "mcp-config.json",
+  "bin": {
+    "mcp-config": "./launch-mcp.js"
+  },
+  "scripts": {
+    "start": "node launch-mcp.js"
+  },
+  "keywords": ["mcp", "configuration", "context-servers"],
+  "author": "Anragde",
+  "license": "MIT"
+}
